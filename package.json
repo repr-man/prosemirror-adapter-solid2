@@ -26,9 +26,7 @@
     "src"
   ],
   "scripts": {
-    "build": "tsdown --platform browser && vite build",
-    "playground": "vite --config playground/vite.config.ts",
-    "playground:build": "vite build --config playground/vite.config.ts",
+    "build:package": "tsdown --platform browser && vite build",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint src"
   },
@@ -54,7 +52,7 @@
     "prosemirror-schema-list": "^1.5.1",
     "solid-js": "^2.0.0-rc.9",
     "tsdown": "^0.23.0",
-    "typescript": "^5.9.2",
+    "typescript": "^7.0.2",
     "vite": "^8.1.5"
   }
 }
