@@ -1,0 +1,60 @@
+{
+  "name": "@prosemirror-adapter/solid",
+  "version": "0.6.0",
+  "description": "Solid 2 adapter for ProseMirror Adapter",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prosekit/prosemirror-adapter.git",
+    "directory": "packages/solid"
+  },
+  "keywords": [
+    "prosemirror-adapter",
+    "solid-js"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsdown --platform browser && vite build",
+    "playground": "vite --config playground/vite.config.ts",
+    "playground:build": "vite build --config playground/vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@prosemirror-adapter/core": "0.5.5",
+    "prosemirror-model": "^1.25.11",
+    "prosemirror-state": "^1.4.4",
+    "prosemirror-view": "^1.42.3"
+  },
+  "peerDependencies": {
+    "@solidjs/web": "^2.0.0-rc.0",
+    "solid-js": "^2.0.0-rc.0"
+  },
+  "devDependencies": {
+    "@solidjs/vite-plugin": "^3.0.0-next.44",
+    "@solidjs/web": "^2.0.0-rc.9",
+    "eslint-plugin-solid": "~0.18.0",
+    "oxlint": "~1.79.0",
+    "prosemirror-commands": "^1.7.1",
+    "prosemirror-keymap": "^1.2.3",
+    "prosemirror-schema-basic": "^1.2.4",
+    "prosemirror-schema-list": "^1.5.1",
+    "solid-js": "^2.0.0-rc.9",
+    "tsdown": "^0.23.0",
+    "typescript": "^5.9.2",
+    "vite": "^8.1.5"
+  }
+}
